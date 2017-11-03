@@ -1,0 +1,226 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  .main_card_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px !important;
+  }
+  .main_card {
+    width: 220px;
+    height: 393px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 3px rgba(37, 72, 133, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .main_cardnum {
+      width: 42px;
+      height: 49px;
+      font-size: 36px;
+      text-align: center;
+      color: #ff7254;
+      text-shadow: 0 1px 0 #ffffff;
+      font-weight: 300;
+      padding-right: 190px;
+    }
+    .main_cardimg_st1 {
+      background-image: url("ky_search.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st2 {
+      background-image: url("ky_match.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st3 {
+      background-image: url("ky_chat.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st4 {
+      background-image: url("ky_meet.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardtext {
+      width: 169px;
+      height: 60px;
+      font-size: 14px;
+      text-align: left;
+      color: #4a4a4a;
+    }
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .main_padding {
+    padding-top: 90px !important;
+  }
+  .row .main_card_flex:nth-child(2n-1) {
+    padding-left: 170px;
+  }
+  .row .main_card_flex:nth-child(2n) {
+    padding-right: 170px;
+  }
+
+  .main_card_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px !important;
+  }
+  .main_card {
+    width: 220px;
+    height: 393px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px 3px rgba(37, 72, 133, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .main_cardnum {
+      width: 42px;
+      height: 49px;
+      font-size: 36px;
+      text-align: center;
+      color: #ff7254;
+      text-shadow: 0 1px 0 #ffffff;
+      font-weight: 300;
+      padding-right: 190px;
+    }
+    .main_cardimg_st1 {
+      background-image: url("ky_search.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st2 {
+      background-image: url("ky_match.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st3 {
+      background-image: url("ky_chat.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st4 {
+      background-image: url("ky_meet.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardtext {
+      width: 169px;
+      height: 60px;
+      font-size: 14px;
+      text-align: left;
+      color: #4a4a4a;
+    }
+  }
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+  .main_card_flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 50px !important;
+  }
+  .main_card {
+    width: 220px;
+  	height: 393px;
+  	border-radius: 10px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 30px 3px rgba(37, 72, 133, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    .main_cardnum {
+      width: 42px;
+    	height: 49px;
+    	font-size: 36px;
+    	text-align: center;
+    	color: #ff7254;
+    	text-shadow: 0 1px 0 #ffffff;
+      font-weight: 300;
+      padding-right: 190px;
+    }
+    .main_cardimg_st1 {
+      background-image: url("ky_search.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st2 {
+      background-image: url("ky_match.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st3 {
+      background-image: url("ky_chat.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardimg_st4 {
+      background-image: url("ky_meet.png");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 128.5px;
+      height: 132.2px;
+    }
+    .main_cardtext {
+      width: 169px;
+    	height: 60px;
+    	font-size: 14px;
+    	text-align: left;
+    	color: #4a4a4a;
+    }
+  }
+}
+
+
+//all
+.main_padding {
+  padding-top: 27px;
+}
+.main_padding2 {
+  padding-top: 30px;
+}

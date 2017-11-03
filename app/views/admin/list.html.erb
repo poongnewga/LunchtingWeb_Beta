@@ -1,0 +1,10 @@
+<table style="margin-top: 150px;">
+    <tr>
+        <td><strong>회사 이름</strong></td>
+    </tr>
+    <% @user.pluck(:company).uniq.each do |c| %>
+      <tr>
+        <td><%= c %></td>
+      </tr>
+    <% end %>
+</table>

@@ -1,0 +1,177 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  .main_tip_article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 20px !important;
+  }
+  .main_tip_section_title {
+    margin: 0 auto;
+    width: 85vw;
+  	height: 29px;
+  	font-size: 18px;
+  	font-weight: 500;
+  	text-align: center;
+  	color: #4a4a4a;
+  }
+  .main_tip_card {
+    width: 219.2px;
+  	height: 241.2px;
+  	border-radius: 5px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 30px 0 rgba(37, 72, 133, 0.05);
+    &:hover {
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0px 0px 50px #000000;
+      z-index: 2;
+      -webkit-transition: all 100ms ease-in;
+      -webkit-transform: scale(1.1);
+      -ms-transition: all 100ms ease-in;
+      -ms-transform: scale(1.1);
+      -moz-transition: all 100ms ease-in;
+      -moz-transform: scale(1.1);
+      transition: all 100ms ease-in;
+      transform: scale(1.1);
+    }
+    .main_tip_img {
+      width: 100%;
+    	height: 155.6px;
+    	border-radius: 4px;
+    	background-color: #909090;
+    }
+    .main_tip_card_title {
+      width: 190px;
+    	height: 20px;
+    	font-size: 14px;
+    	line-height: 1.43;
+    	text-align: left;
+    	color: #4a4a4a;
+      padding-top: 25px;
+      padding-left: 18px;
+    }
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  article.main_tip_article:nth-child(2n-1) {
+    padding-left: 170px;
+  }
+  article.main_tip_article:nth-child(2n) {
+    padding-right: 170px;
+  }
+  .main_tip_article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px !important;
+  }
+  .main_tip_section_title {
+    width: 420px;
+  	height: 29px;
+  	font-size: 22px;
+  	font-weight: 500;
+  	text-align: center;
+    margin: 0 auto;
+  	color: #4a4a4a;
+  }
+  .main_tip_card {
+    width: 219.2px;
+  	height: 241.2px;
+  	border-radius: 5px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 30px 0 rgba(37, 72, 133, 0.05);
+    &:hover {
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0px 0px 50px #000000;
+      z-index: 2;
+      -webkit-transition: all 100ms ease-in;
+      -webkit-transform: scale(1.1);
+      -ms-transition: all 100ms ease-in;
+      -ms-transform: scale(1.1);
+      -moz-transition: all 100ms ease-in;
+      -moz-transform: scale(1.1);
+      transition: all 100ms ease-in;
+      transform: scale(1.1);
+    }
+    .main_tip_img {
+      width: 100%;
+    	height: 155.6px;
+    	border-radius: 4px;
+    	background-color: #909090;
+    }
+    .main_tip_card_title {
+      width: 190px;
+    	height: 20px;
+    	font-size: 14px;
+    	line-height: 1.43;
+    	text-align: left;
+    	color: #4a4a4a;
+      padding-top: 25px;
+      padding-left: 18px;
+    }
+  }
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+  .main_tip_article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px !important;
+  }
+  .main_tip_section_title {
+    width: 420px;
+  	height: 29px;
+  	font-size: 24px;
+  	font-weight: 500;
+  	text-align: left;
+    padding-left: 10px;
+  	color: #4a4a4a;
+  }
+  .main_tip_card {
+    width: 219.2px;
+  	height: 241.2px;
+  	border-radius: 5px;
+  	background-color: #ffffff;
+  	box-shadow: 0 0 30px 0 rgba(37, 72, 133, 0.05);
+    &:hover {
+      cursor: pointer;
+      border-radius: 5px;
+      box-shadow: 0px 0px 50px #000000;
+      z-index: 2;
+      -webkit-transition: all 100ms ease-in;
+      -webkit-transform: scale(1.1);
+      -ms-transition: all 100ms ease-in;
+      -ms-transform: scale(1.1);
+      -moz-transition: all 100ms ease-in;
+      -moz-transform: scale(1.1);
+      transition: all 100ms ease-in;
+      transform: scale(1.1);
+    }
+    .main_tip_img {
+      width: 100%;
+    	height: 155.6px;
+    	border-radius: 4px;
+    	background-color: #909090;
+    }
+    .main_tip_card_title {
+      width: 190px;
+    	height: 20px;
+    	font-size: 14px;
+    	line-height: 1.43;
+    	text-align: left;
+    	color: #4a4a4a;
+      padding-top: 25px;
+      padding-left: 18px;
+    }
+  }
+}
+.main_padding3 {
+  padding-top: 40px;
+}
+.main_bottom_padding {
+  padding-top: 50px;
+}

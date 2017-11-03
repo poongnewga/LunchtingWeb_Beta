@@ -1,0 +1,183 @@
+<h1 class="dk_sr-only">런치팅 - 미팅 신청</h1>
+<h2 class="dk_sr-only">미팅 신청 페이지 입니다.</h2>
+<div class="main-wrapper">
+	<!--<div class="ks_wrapper">-->
+	<div class="yr_tip">
+		<div class="yr_tip2">
+			<p id="userlocation" style="display: none;">
+				<%=@user_location %>
+			</p>
+			<p id="userlunchtime" style="display: none;">
+				<%=@user_lunchtime %>
+			</p>
+			<%=form_tag groups_path, method: "post" , class: "dk_applyForm" do %>
+  			<div class="yr_div1">
+  				<p id="yr_div1_label">
+  					신청하기
+  				</p>
+  			</div>
+  			<!-- week -->
+  			<%=hidden_field_tag :gender, current_user.gender %>
+  			<%=hidden_field_tag :week, @nextweekstart %>
+  			<div class="yr_div_people">
+  				<div class="yr_div2">
+  					<span id="yr_div2_label"> 인원 </span>
+  					<%=select_tag(:people, options_for_select([1, 2, 3, 4]), {:class => 'yr_div2_tag'}) %>
+  				</div>
+  				<p class="auth_1 auth_2 auth_3 yr_div3">
+  					<span class="yr_div3_label"><%=label_tag(:add_nick1, "두번째 멤버") %></span>
+            <span class="groupNewFlex">
+    					<%=text_field_tag :add_nick1, "", placeholder: '닉네임', class: 'yr_div3_tag' %>
+    					<button type="button" class="yr_btn1">인증하기</button>
+            </span>
+  					<span id="yr_result1"></span>
+  				</p>
+  				<p class="auth_2 auth_3 yr_div4">
+  					<span class="yr_div4_label"><%=label_tag(:add_nick2, "세번째 멤버") %></span>
+            <span class="groupNewFlex">
+              <%=text_field_tag :add_nick2, "", placeholder: '닉네임', class: 'yr_div4_tag' %>
+    					<button type="button" class="yr_btn2">인증하기</button>
+            </span>
+  					<span id="yr_result2"></span>
+  				</p>
+  				<p class="auth_3 yr_div5">
+  					<span class="yr_div5_label"><%=label_tag(:add_nick3, "네번째 멤버") %></span>
+            <span class="groupNewFlex">
+              <%=text_field_tag :add_nick3, "", placeholder: '닉네임', class: 'yr_div5_tag' %>
+    					<button type="button" class="yr_btn3">인증하기</button>
+            </span>
+  					<span id="yr_result3"></span>
+  				</p>
+  			</div>
+  			<div class="yr_div6">
+  				<p class="yr_div6_label">
+  					요일
+  				</p>
+          <div class="groupNewFlex2">
+    				<div class="yr_daybutton">
+    					<label>
+    					<%=hidden_field_tag :mon, "0" %>
+    					<%=check_box_tag :mon, "1", false, class: 'yr_daycheckbox' %>
+    					<p class="yr_thisday">
+    						월
+    					</p>
+    					</label>
+    				</div>
+    				<div class="yr_daybutton" id="yr_daybutton_mon" type="button">
+    					<label>
+    					<%=hidden_field_tag :tue, "0" %>
+    					<%=check_box_tag :tue, "1", false, class:'yr_daycheckbox' %>
+    					<div class="yr_thisday">
+    						화
+    					</div>
+    					</label>
+    				</div>
+    				<div class="yr_daybutton" type="button">
+    					<label>
+    					<%=hidden_field_tag :wed, "0" %>
+    					<%=check_box_tag :wed, "1", false, class:'yr_daycheckbox' %>
+    					<p class="yr_thisday">
+    						수
+    					</p>
+    					</label>
+    				</div>
+    				<div class="yr_daybutton" type="button">
+    					<label>
+    					<%=hidden_field_tag :thu, "0" %>
+    					<%=check_box_tag :thu, "1", false, class:'yr_daycheckbox' %>
+    					<p class="yr_thisday">
+    						목
+    					</p>
+    					</label>
+    				</div>
+    				<div class="yr_daybutton" type="button">
+    					<label>
+    					<%=hidden_field_tag :fri, "0" %>
+    					<%=check_box_tag :fri, "1", false, class:'yr_daycheckbox' %>
+    					<p class="yr_thisday">
+    						금
+    					</p>
+    					</label>
+    				</div>
+          </div>
+  			</div>
+  			<div class="yr_div7">
+          <div class="groupNewFlex2">
+    				<p class="yr_div7_mon">
+    					<%=@dayshash[7] %>
+    				</p>
+    				<p class="yr_div7_tue">
+    					<%=@dayshash[8] %>
+    				</p>
+    				<p class="yr_div7_tue">
+    					<%=@dayshash[9] %>
+    				</p>
+    				<p class="yr_div7_tue">
+    					<%=@dayshash[10] %>
+    				</p>
+    				<p class="yr_div7_tue">
+    					<%=@dayshash[11] %>
+    				</p>
+          </div>
+  			</div>
+  			<div class="yr_div8">
+  				<p class="yr_div8_label">
+  					점심시간
+  				</p>
+          <div class="groupNewFlex2">
+    				<%=text_field_tag :lunchtime_beg, @start, id: 'lunchtime_start', class: 'timepicker1' %>
+    				<p class="yr_div8_wave">
+    					 ~
+    				</p>
+    				<%=text_field_tag :lunchtime_end, @finish, id: 'lunchtime_finish', class: 'timepicker2' %>
+          </div>
+  			</div>
+  			<div class="yr_div9">
+  				<label>
+  				<%=hidden_field_tag :lunchtime_save, "0" %>
+          <div class="groupNewFlex2">
+    				<%=check_box_tag :lunchtime_save, "1", false, class: 'yr_div9_checkbox' %>
+    				<p class="yr_div9_label">
+    					 이 시간을 기본 점심 시간으로 저장합니다.
+    				</p>
+          </div>
+  				</label>
+  			</div>
+  			<input type="hidden" value="<% @start %>"><%=hidden_field_tag :location_lat, {:id => 'location_lat'}, {:value => @latitude} %> <%=hidden_field_tag :location_lng, {:id => 'location_lng'}, {:value => @longitude} %>
+  			<div class="yr_div10">
+  				<p class="yr_div10_label">
+  					근무지 위치
+  				</p>
+  				<input id="pac-input" class="controls" type="text" placeholder="주소를 입력해주세요">
+  				<div id="map" class="dk_mapControll">
+  				</div>
+  				<div id="infowindow-content">
+  					<span id="place-name" class="title"></span><br>
+  					<span id="place-address"></span>
+  				</div>
+  			</div>
+  			<div class="yr_div9">
+  				<label>
+  				<%=hidden_field_tag :location_save, "0" %>
+          <div class="groupNewFlex3">
+    				<%=check_box_tag :location_save, "1", false, class: 'yr_div9_checkbox' %>
+    				<p class="yr_div9_label">
+    					 이 위치를 기본 근무지 위치로 저장합니다.
+    				</p>
+          </div>
+  				</label>
+  			</div>
+  			<div onclick="// 그룹에서 최종적으로 신청 gtag('event', 'apply', { 'event_category': 'Application', 'event_label': 'group' });">
+  				<%=submit_tag "신청하기", id: "dk_submitbutton", class: "yr_submit" %>
+  			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
+</div>
+<% content_for :page_js do %>
+  <script type="text/javascript">
+       <%= render file: "#{Rails.root}/app/assets/javascripts/groups_new.js" %>
+    </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRiqpz5Q86RQ_j7KkPiP25hvjmPVGqdcU&libraries=places&callback=initMap" async defer></script>
+<% end %>

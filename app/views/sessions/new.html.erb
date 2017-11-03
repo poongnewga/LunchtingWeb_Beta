@@ -1,0 +1,75 @@
+<h1 class="dk_sr-only">런치팅 - 회원가입</h1>
+<h2 class="dk_sr-only">회원가입 페이지 입니다.</h2>
+<div class = "ky_login-wrapper">
+	<div class="container">
+		<div class = "ky_login-pic push-dk-1 col-dk-4 push-tb-1 col-tb-4 non-mobile">
+			<div class = "ky_picture">
+				<%= image_tag("ky_phone.png", class: "ky_picture") %>
+			</div>
+			<div class="ky_app_download">
+				<%= image_tag("ky_iphone.png", class: "ky_app_down") %>
+				<%= image_tag("ky_play.png", class: "ky_app_down") %>
+			</div>
+		</div>
+		<div class="login_mb_cover col-mb-3">
+			<div class = "ky_login-sub push-dk-1 col-dk-3 push-tb-1 col-tb-4">
+				<div class = "ky_login-input">
+					<div class = "ky_logo">
+						<%= image_tag("dk_navlogo.png", class: "ky_logo") %>
+					</div>
+					<div class="ky_error-comment">
+						<% flash.each do |message_type, message| %>
+						  <div class="alert alert-<%= message_type %> ky_alert">
+						    <%= message %>
+						  </div>
+						<% end %>
+					</div>
+					<%= form_tag sessions_path do %>
+					  <input class="ky_nickname" type="string" name="nickname" placeholder="닉네임">
+					  <input class="ky_password" type="password" name="password" placeholder="비밀번호">
+					  <div onclick="// 세션에서 로그인
+						gtag('event', 'logIn', {
+						  'event_category': 'User',
+						  'event_label': 'sessions'
+						});">
+					  	<input class="ky_submit" type="submit" value="로그인">
+					  </div>
+					<% end %>
+
+					<a href="">
+						<div class = "ky_sign-up" onclick="// 세션에서 회원가입
+						gtag('event', 'signIn', {
+						  'event_category': 'User',
+						  'event_label': 'sessions'
+						});">
+							<%= link_to '회원 가입', new_user_path, :class => "ky_sign-up-font" %>
+						</div>
+					</a>
+
+					<div class = "ky_find">
+						<div onclick="// 세션에서 닉네임 찾기
+						gtag('event', 'findNick', {
+						  'event_category': 'User',
+						  'event_label': 'sessions'
+						});">
+							<%= link_to "닉네임 찾기", find_id_index_path, :class => "ky_find-font" %>
+						</div>
+						&nbsp;
+						<div onclick="// 세션에서 비밀번호 찾기
+							gtag('event', 'findPw', {
+						  	'event_category': 'User',
+						  	'event_label': 'sessions'
+							});">
+							<a style="	font-size: 13px; color: #a2a2a2;">|</a>
+							<%= link_to "비밀번호 찾기", find_password_index_path, :class => "ky_find-font"%>
+						</div>
+					</div>
+					<div class="ky_app_download col-mb-3 mobile">
+						<%= image_tag("ky_iphone.png", class: "ky_app_down") %>
+						<%= image_tag("ky_play.png", class: "ky_app_down") %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

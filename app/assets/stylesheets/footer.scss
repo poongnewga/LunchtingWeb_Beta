@@ -1,0 +1,198 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  .hj-mainFooter {
+    width: 100vw;
+    min-height: 285px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hj-footerBox {
+      margin-top: 0px;
+      width: 100%;
+      // 높이는 수정 필요
+      background-color: #333333;
+      // 원래 #5c5c5c 한 번 바꿔봤어요 경섭
+    }
+    .ks_company {
+      width: 100%;
+    }
+    .ks_sns {
+      width: 100%;
+    }
+    #ks_widgettitle {
+      font-size: 12px;
+      margin-top: 20px;
+      padding: 8px;
+      text-align: left;
+      color: #fff;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+    .ks_textwidget {
+      line-height: 1.4;
+      font-size: 8px !important;
+      margin: 20px;
+      color: #fff;
+    }
+    .ks_text {
+      margin-bottom: 5px ;
+    }
+  }
+  .ks_footer2 {
+    background-color: #222222;
+    height: 50px;
+    border-top: 1px solid #525252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ks_footerBox {
+    line-height: 1.4;
+    font-size: 6px;
+    color: #fff;
+  }
+
+  .ks_text2 {
+    margin-bottom: 15px ;
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .hj-mainFooter {
+    width: 100vw;
+    min-height: 285px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hj-footerBox {
+      margin-top: 0px;
+      width: 1080px;
+      // 높이는 수정 필요
+      height: 230px;
+      background-color: #333333;
+      // 원래 #5c5c5c 한 번 바꿔봤어요 경섭
+    }
+    .ks_company {
+      float: left;
+      width: 380px;
+    }
+    .ks_sns {
+      float: right;
+      width: 380px;
+    }
+    #ks_widgettitle {
+      font-size: 12px;
+      margin-top: 20px;
+      padding: 8px;
+      text-align: left;
+      color: #fff;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+    .ks_textwidget {
+      line-height: 1.4;
+      font-size: 8px !important;
+      margin: 20px;
+      color: #fff;
+    }
+    .ks_text {
+      margin-bottom: 5px ;
+    }
+  }
+  .ks_footer2 {
+    background-color: #222222;
+    height: 50px;
+    border-top: 1px solid #525252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ks_footerBox {
+    text-align: center;
+    line-height: 1.4;
+    font-size: 8px;
+    color: #fff;
+  }
+
+  .ks_text2 {
+    margin-bottom: 15px ;
+  }
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+  .hj-mainFooter {
+    width: 100vw;
+    min-height: 285px;
+    background-color: #333333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .hj-footerBox {
+      margin-top: 0px;
+      width: 1080px;
+      // 높이는 수정 필요
+      height: 230px;
+      background-color: #333333;
+      // 원래 #5c5c5c 한 번 바꿔봤어요 경섭
+    }
+    .ks_company {
+      float: left;
+      width: 400px;
+    }
+    .ks_sns {
+      float: right;
+      width: 400px;
+    }
+    #ks_widgettitle {
+      font-size: 14px;
+      margin-top: 20px;
+      padding: 8px;
+      text-align: left;
+      color: #fff;
+      border-top: 1px solid #fff;
+      border-bottom: 1px solid #fff;
+    }
+    .ks_textwidget {
+      line-height: 1.4;
+      font-size: 12px;
+      margin: 20px;
+      color: #fff;
+    }
+    .ks_text {
+      margin-bottom: 5px ;
+    }
+  }
+  .ks_footer2 {
+    background-color: #222222;
+    height: 50px;
+    border-top: 1px solid #525252;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .ks_footerBox {
+    line-height: 1.4;
+    font-size: 11px;
+    color: #fff;
+  }
+
+  .ks_text2 {
+    margin-bottom: 15px ;
+  }
+}
+
+.footer_img {
+  width: 30px;
+  height: 30px;
+}
+
+.ks_textwidget .ks_text2 a {
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+}

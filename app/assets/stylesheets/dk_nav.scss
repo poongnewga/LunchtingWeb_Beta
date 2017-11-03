@@ -1,0 +1,320 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  $nav-height: 80px;
+  .dk_nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100vw;
+    height: $nav-height;
+    background-color: #ffffff;
+  }
+  .logo_a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $nav-height;
+    padding-left: 40px;
+  }
+  .dk_navlogo {
+    width: 135px;
+  	height: 55px;
+  }
+  .baricon{
+    display: flex;
+    height: $nav-height;
+    justify-content: flex-end;
+    align-items: center;
+    i {
+      color: #ff5955;
+      width: 21.2px;
+      padding-right: 40px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    &:after {
+      display: block;
+      content: "";
+      clear: both;
+    }
+  }
+  .dk_mb_navbar {
+    a {
+      display: none;
+    }
+    ul li:first-child {
+      padding-top: $nav-height;
+    }
+  }
+  .responsive a {
+    float: none;
+    transition: all 0.2s ease-in-out;
+    background-color: #fff;
+    display: block;
+    text-align: left;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #494949;
+    &:hover {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #fc5a5a;
+    transition: all 0.2s ease-in-out;
+    }
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  $nav-height: 108px;
+  .dk_nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: $nav-height;
+    background-color: #ffffff;
+  }
+  .logo_a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $nav-height;
+  }
+  .dk_navlogo {
+    width: 79px;
+    height: 82px;
+  }
+  .dk_menu {
+    display: flex;
+    height: $nav-height;
+    align-items: center;
+    justify-content: space-around;
+    li a {
+      width: 14px;
+      height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      color: #494949;
+      &:hover {
+        padding-bottom: 38px;
+        border-bottom: #fc5a5a solid 6px;
+      }
+    }
+  }
+  .dk_login {
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .dk_logbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 84px;
+      height: 35px;
+      border-radius: 10px;
+      border: solid 1px #ff7254;
+      a {
+        display: block;
+        width: 80px;
+        height: 24px;
+        font-size: 16px;
+        text-align: center;
+        color: #ff7456;
+      }
+    }
+    .dk_loginbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 84px;
+      height: 35px;
+      border-radius: 10px;
+      background-color: #ff7254;
+      a {
+        display: block;
+        width: 70px;
+        height: 24px;
+        font-size: 16px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+    .dk_nav_login_success {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dk_nav_welcome {
+        margin-bottom: 7px;
+        margin-left: 54px;
+        width: 178px;
+      	height: 40px;
+      	font-size: 14px;
+      	text-align: left;
+      	color: #4a4a4a;
+      }
+      .dk_nav_login_success_bottom {
+        width: 125px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .dk_msgbox {
+        margin-top: 8px;
+      }
+      .dk_logbox_logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+      	height: 27px;
+      	border-radius: 4px;
+      	background-color: #ffffff;
+      	border: solid 1px #fc5a5a;
+        margin-top: 3px;
+        margin-right: 12px;
+        a {
+          display: block;
+          width: 52px;
+        	height: 17px;
+        	font-size: 14px;
+        	font-weight: 500;
+        	text-align: left;
+        	color: #fc5a5a;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+  $nav-height: 108px;
+  .dk_nav {
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: $nav-height;
+	  background-color: #ffffff;
+  }
+  .logo_a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $nav-height;
+  }
+  .dk_navlogo {
+    width: 79px;
+    height: 82px;
+  }
+  .dk_menu {
+    display: flex;
+    height: $nav-height;
+    align-items: center;
+    justify-content: space-around;
+    li a {
+      width: 14px;
+    	height: 20px;
+    	font-size: 14px;
+    	font-weight: bold;
+    	text-align: center;
+    	color: #494949;
+      &:hover {
+        padding-bottom: 38px;
+        border-bottom: #fc5a5a solid 6px;
+      }
+    }
+  }
+  .dk_login {
+    height: $nav-height;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .dk_logbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 84px;
+    	height: 35px;
+    	border-radius: 10px;
+    	border: solid 1px #ff7254;
+      a {
+        display: block;
+        width: 80px;
+      	height: 24px;
+      	font-size: 16px;
+      	text-align: center;
+      	color: #ff7456;
+      }
+    }
+    .dk_loginbox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 84px;
+      height: 35px;
+      border-radius: 10px;
+      background-color: #ff7254;
+      a {
+        display: block;
+        width: 70px;
+        height: 24px;
+        font-size: 16px;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+    .dk_nav_login_success {
+      width: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .dk_nav_welcome {
+        margin-bottom: 7px;
+        margin-left: 54px;
+        width: 178px;
+      	height: 40px;
+      	font-size: 14px;
+      	text-align: left;
+      	color: #4a4a4a;
+      }
+      .dk_nav_login_success_bottom {
+        width: 125px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .dk_msgbox {
+        margin-top: 8px;
+      }
+      .dk_logbox_logout {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 75px;
+      	height: 27px;
+      	border-radius: 4px;
+      	background-color: #ffffff;
+      	border: solid 1px #fc5a5a;
+        margin-top: 3px;
+        margin-right: 12px;
+        a {
+          display: block;
+          width: 52px;
+        	height: 17px;
+        	font-size: 14px;
+        	font-weight: 500;
+        	text-align: left;
+        	color: #fc5a5a;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}

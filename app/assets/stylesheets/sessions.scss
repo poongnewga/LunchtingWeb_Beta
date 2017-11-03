@@ -1,0 +1,353 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+	.login_mb_cover {
+		margin-top: 120px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		.ky_login-sub {
+			padding-top: 40px;
+			width: 300px;
+			height: 500px;
+			border-radius: 11px;
+			background-color: #ffffff;
+			box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.49);
+			display: flex;
+			justify-content: center;
+			.ky_logo {
+				margin: 0 auto;
+				width: 109.6px;
+				height: 115.2px;
+				background-color: 'black';
+				margin-bottom: 20px;
+			}
+			.ky_login-input {
+				display: flex;
+				justify-content: center;
+				display: block;
+				height: 200px;
+				.ky_error-comment {
+					margin: 0 auto;
+					height: 30px;
+					.ky_alert {
+						margin: 0 auto;
+						width: 180px;
+						height: 30px;
+						color: #fc5a5a;
+						text-align: center;
+					}
+				}
+				input.ky_nickname, input.ky_password {
+					margin: 0 auto;
+					width: 202.4px;
+					height: 37px;
+					border-radius: 4px;
+					background-color: #ffffff;
+					border: solid 1px #fc5a5a;
+					margin-bottom: 13px;
+					display: flex;
+					justify-content: center;
+					padding-left: 5px;
+				}
+				input.ky_submit {
+					margin: 0 auto;
+					width: 202.4px;
+					height: 37px;
+					border-radius: 4px;
+					background-color: #fc5a5a;
+					border: solid 1px #fc5a5a;
+					margin-bottom: 13px;
+					display: flex;
+					color: #ffffff;
+					justify-content: center;
+				}
+				.ky_sign-up {
+					margin: 0 auto;
+					width: 202.4px;
+					height: 37px;
+					border-radius: 4px;
+					background-color: #ffffff;
+					border: solid 1px #fc5a5a;
+					margin-bottom: 8px;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				.ky_sign-up-font {
+					 font-size: 13px;
+					 font-weight: 500;
+					 color: #fc5a5a;
+					 text-decoration: none;
+				}
+				.ky_find {
+					margin: 0 auto;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					width: 202.4px;
+					height: 7vh;
+			 	}
+				.ky_find-font {
+					font-size: 13px;
+					color: #a2a2a2;
+				}
+			}
+		}
+	}
+	.ky_app_download {
+		display: flex;
+		justify-content: space-around;
+		margin-top: 80px;
+		width: 300px;
+		height: 40px;
+		.ky_app_down {
+			width: 135px;
+			height: 40px;
+		}
+		img:first-child {
+			margin-right: 16px;
+		}
+	}
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+	.ky_login-wrapper {
+		margin-top: 108px;
+		margin-bottom: 50px;
+		width: 1080px;
+		height: 600px;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		padding-right: 100px;
+		.ky_login-pic {
+			width: 400px;
+			.ky_picture {
+				width: 300px;
+				height: 500px;
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+			.ky_app_download {
+				display: flex;
+				justify-content: space-around;
+				width: 300px;
+				height: 40px;
+				.ky_app_down {
+					width: 135px;
+					height: 40px;
+				}
+			}
+		}
+			.ky_login-sub {
+				padding-top: 80px;
+				width: 388px;
+		    height: 580px;
+		    border-radius: 11px;
+		    background-color: #ffffff;
+		    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.49);
+				display: flex;
+				justify-content: center;
+				.ky_logo {
+					margin: 0 auto;
+					width: 137px;
+					height: 144px;
+					background-color: 'black';
+					margin-bottom: 53px;
+				}
+				.ky_login-input {
+					margin: 0 auto;
+					display: block;
+					width: 40vw;
+					height: 200px;
+					.ky_error-comment {
+						margin: 0 auto;
+						height: 30px;
+						.ky_alert {
+							height: 30px;
+							width: 40vw;
+							color: #fc5a5a;
+							text-align: center;
+						}
+					}
+					input.ky_nickname, input.ky_password {
+						margin: 0 auto;
+						width: 231px;
+						height: 37px;
+						border-radius: 4px;
+						background-color: #ffffff;
+						border: solid 1px #fc5a5a;
+						margin-bottom: 13px;
+						display: flex;
+						justify-content: center;
+						padding-left: 5px;
+					}
+					input.ky_submit {
+						margin: 0 auto;
+						width: 231px;
+						height: 37px;
+						border-radius: 4px;
+						background-color: #fc5a5a;
+						border: solid 1px #fc5a5a;
+						margin-bottom: 13px;
+						display: flex;
+						color: #ffffff;
+						justify-content: center;
+					}
+					.ky_sign-up {
+						margin: 0 auto;
+						width: 231px;
+	  				height: 37px;
+	  				border-radius: 4px;
+	  				background-color: #ffffff;
+	  				border: solid 1px #fc5a5a;
+	  				margin-bottom: 8px;
+	  				display: flex;
+	  				justify-content: center;
+	  				align-items: center;
+	  			}
+	  			.ky_sign-up-font {
+  		  	 	 font-size: 13px;
+	  				 font-weight: 500;
+	  				 color: #fc5a5a;
+	  				 text-decoration: none;
+	  			}
+	  			.ky_find {
+						margin: 0 auto;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 231px;
+						height: 7vh;
+				 }
+	  			.ky_find-font {
+  					font-size: 13px;
+  					color: #a2a2a2;
+	  			}
+				}
+			}
+	}
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+	.ky_login-wrapper {
+		margin-top: 108px;
+		margin-bottom: 50px;
+		width: 1080px;
+		height: 600px;
+		display: flex;
+		justify-content: space-between;
+		padding-top: 30px;
+		padding-right: 100px;
+		.ky_login-pic {
+			width: 400px;
+			.ky_picture {
+				width: 300px;
+				height: 500px;
+				display: flex;
+				align-items: center;
+				margin-bottom: 20px;
+			}
+			.ky_app_download {
+				display: flex;
+				justify-content: space-around;
+				width: 300px;
+				height: 40px;
+				.ky_app_down {
+					width: 135px;
+					height: 40px;
+				}
+			}
+		}
+			.ky_login-sub {
+				padding-top: 80px;
+				width: 388px;
+		    height: 580px;
+		    border-radius: 11px;
+		    background-color: #ffffff;
+		    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.49);
+				display: flex;
+				justify-content: center;
+				.ky_logo {
+					margin: 0 auto;
+					width: 137px;
+					height: 144px;
+					background-color: 'black';
+					margin-bottom: 53px;
+				}
+				.ky_login-input {
+					margin: 0 auto;
+					display: block;
+					width: 40vw;
+					height: 200px;
+					.ky_error-comment {
+						margin: 0 auto;
+						height: 30px;
+						.ky_alert {
+							height: 30px;
+							width: 40vw;
+							color: #fc5a5a;
+							text-align: center;
+						}
+					}
+					input.ky_nickname, input.ky_password {
+						margin: 0 auto;
+						width: 231px;
+						height: 37px;
+						border-radius: 4px;
+						background-color: #ffffff;
+						border: solid 1px #fc5a5a;
+						margin-bottom: 13px;
+						display: flex;
+						justify-content: center;
+						padding-left: 5px;
+					}
+					input.ky_submit {
+						margin: 0 auto;
+						width: 231px;
+						height: 37px;
+						border-radius: 4px;
+						background-color: #fc5a5a;
+						border: solid 1px #fc5a5a;
+						margin-bottom: 13px;
+						display: flex;
+						color: #ffffff;
+						justify-content: center;
+					}
+
+					.ky_sign-up {
+						margin: 0 auto;
+						width: 231px;
+	  				height: 37px;
+	  				border-radius: 4px;
+	  				background-color: #ffffff;
+	  				border: solid 1px #fc5a5a;
+	  				margin-bottom: 8px;
+	  				display: flex;
+	  				justify-content: center;
+	  				align-items: center;
+	  			}
+	  			.ky_sign-up-font {
+  		  	 	 font-size: 13px;
+	  				 font-weight: 500;
+	  				 color: #fc5a5a;
+	  				 text-decoration: none;
+	  			}
+
+	  			.ky_find {
+						margin: 0 auto;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						width: 231px;
+						height: 7vh;
+				 }
+	  			.ky_find-font {
+  					font-size: 13px;
+  					color: #a2a2a2;
+	  			}
+				}
+			}
+	}
+}

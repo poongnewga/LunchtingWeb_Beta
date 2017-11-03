@@ -1,0 +1,58 @@
+<header class="dk_nav">
+  <nav class="dk_wrapper container">
+    <div class="row">
+      <h1 class="logo_a col-dk-2 col-tb-2 col-mb-1">
+        <a class="logo_a non-mobile" href="/"><%= image_tag("dk_navlogo.png", class: "dk_navlogo") %></a>
+        <a class="logo_a mobile" href="/"><%= image_tag("rowlogo.png", class: "dk_navlogo") %></a>
+      </h1>
+      <div class="baricon col-mb-2 mobile"><i class="fa fa-bars fa-2x" onclick="navFunction()" aria-hidden="true"></i></div>
+      <div class="dk_mb_navbar" id="myTopnav">
+      <% if !current_page?('/') || !current_page?('/home/home') %>
+        <ul class="dk_menu col-dk-7 col-tb-7">
+          <li><a href="/">홈</a></li>
+          <li onclick="// 네비게이터에서 신청
+          gtag('event', 'apply', {
+            'event_category': 'Application',
+            'event_label': 'navigator'
+          });"><a href="/groups/new">신청하기</a></li>
+          <li><a href="/users">마이페이지</a></li>
+          <li><a href="/posts">커뮤니티</a></li>
+          <li><a href="/setting/index">설정</a></li>
+        </ul>
+      <% end %>
+      <% if !current_user.nil? %>
+        <div class="dk_login">
+          <div class="dk_nav_login_success">
+            <div class="dk_nav_welcome non-mobile"><%= current_user.nickname %>님<br>로그인 상태입니다.</div>
+            <div class="dk_nav_login_success_bottom">
+              <a href="/users?tab=chat" class="non-mobile"><%= image_tag("dk_msgbox.png", class: "dk_msgbox non-mobile") %></a>
+              <a href="/users?tab=chat" class="mobile">메세지</a>
+              <div class="dk_logbox_logout"><%= link_to '로그아웃', session_path(current_user), method: 'delete' %></div>
+            </div>
+          </div>
+        </div>
+      <% else %>
+        <div class="dk_login col-dk-3 col-tb-3">
+          <div class="dk_logbox" onclick="// 네비게이터에서 회원가입
+          gtag('event', 'signIn', {
+            'event_category': 'User',
+            'event_label': 'navigator'
+          });"><a href="/users/new">회원가입</a></div>
+          <div class="dk_loginbox" onclick="// 네비게이터에서 로그인
+            gtag('event', 'logIn', {
+              'event_category': 'User',
+              'event_label': 'navigator'
+            });"><a href="/sessions/new">로그인</a></div>
+          </div>
+      <% end %>
+      </div>
+    </div>
+  </nav>
+</header>
+<h2 class="dk_sr-only">점심 시간을 이용한 바쁜 일상 속 설레는 미팅 서비스, 런치팅</h2>
+
+<% content_for :page_js do %>
+  <script type="text/javascript">
+     <%= render file: "#{Rails.root}/app/assets/javascripts/navbar.js" %>
+  </script>
+<% end %>

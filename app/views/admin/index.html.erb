@@ -1,0 +1,71 @@
+<h1 class="dk_sr-only">런치팅 - 어드민</h1>
+<h2 class="dk_sr-only">어드민페이지 입니다.</h2>
+<div class="dk_adminwrap">
+  <div class="dk_adtitle">Admin페이지</div>
+  <div class="dk_midline"></div>
+  <div class="dk_admininnerwrap">
+    <div class="dk_userslist">
+      <h2>인증해아할 유저 목록</h2>
+      <table class="dk_usertable">
+        <tr>
+          <th>User id</th>
+          <th>회사명</th>
+          <th>Card_url</th>
+          <th>Email 전송여부</th>
+          <th>보낸시각</th>
+        </tr>
+        <% @user.each do |u| %>
+          <tr>
+            <td><%= u.id %></td>
+            <td><%= u.company %></td>
+            <td><a href="<%= u.card.url %>" target="_blank">명함보기</a></td>
+            <td>
+              <% if u.email.nil? %>
+                X
+              <% else %>
+                <%= u.email %>
+              <% end %>
+            </td>
+            <td>
+              <% if !u.email.nil? %>
+                <%= u.updated_at %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </table>
+    </div>
+    <br>
+
+    <div class="dk_confirmmail">
+      <h2>명함 확인 후 메일전송</h2>
+      <%= form_tag admin_path, class: "dk_conform" do %>
+        가입한 사람 id :
+        <input type="text" name="id"><br>
+        명함 속 이메일 :
+        <input type="text" name="email"><br>
+        명함 속 전화번호 :
+        <input type="text" name="phone"><br>
+        명함 속 회사(<a href="/admin/list" target="_blank">#회사 목록#</a>) :
+        <input type="text" name="company"><br>
+        <button type="submit" class="dk_button">
+            <div class="dk_write">
+              <div class="dk_writetext">메일전송</div>
+            </div>
+        </button>
+      <% end %>
+    </div>
+    <br>
+    <div class="dk_midpath"></div>
+    <br>
+    <h2>현재 있는 그룹들 매칭시키기</h2>
+    <a href="/admin/matching">
+      <div class="dk_button">
+          <div class="dk_write">
+            <div class="dk_writetext2">매칭하기</div>
+          </div>
+      </div>
+    </a>
+  </div>
+</div>
+<%# develop임 %>

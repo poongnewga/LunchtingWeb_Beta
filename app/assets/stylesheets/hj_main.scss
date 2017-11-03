@@ -1,0 +1,285 @@
+/* mobile */
+@media screen and (max-width: 767px) {
+  .hj-mainVideo {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .hj-videoBox {
+      width: 100%;
+      height: 100%;
+      background-image: url("coverimg.png");
+      background-color: #d2d2d2;
+      background-size: 100vw 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      overflow: hidden;
+    }
+
+    .hj-videoGradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('hj_gradient.png');
+      background-size: 100vw 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgba(0,0,0,0);
+      opacity: 0.3;
+      z-index:0;
+    }
+
+    .hj-videoCover {
+      z-index:1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('se_dot_filter.png');
+      background-size: 500px 500px;
+      background-repeat: repeat;
+      background-position: left bottom;
+      background-color: rgba(0,0,0,0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hj-coverBox {
+        text-align: center;
+        .hj-videoCoverText {
+          text-align: center;
+          color: #ffffff;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-bottom: 14px;
+        }
+
+        .hj-applyBtn {
+          margin-top: 20px;
+          width: 200px;
+          height: 50px;
+          border-radius: 11px;
+          background-color: #fc5a5a;
+          border: solid 1px #fc5a5a;
+          font-size: 20px;
+          font-weight: 500;
+          color: #ffffff;
+        }
+        .hj-applyBtn {
+          cursor: pointer; cursor: hand;
+        }
+      }
+    }
+  }
+
+  .hj-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .hj-mainCard {
+      width: 881px;
+      height: 807px;
+      border-radius: 11px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.35);
+      margin-top: 74px;
+      margin-bottom: 74px;
+    }
+  }
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+  .hj-mainVideo {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .hj-videoBox {
+      width: 100%;
+      height: 100%;
+      background-color: #d2d2d2;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      overflow: hidden;
+    }
+
+    .hj-videoGradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('hj_gradient.png');
+      background-size: 100vw 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgba(0,0,0,0);
+      opacity: 0.3;
+      z-index:0;
+    }
+
+    .hj-videoCover {
+      z-index:1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('se_dot_filter.png');
+      background-size: 500px 500px;
+      background-repeat: repeat;
+      background-position: left bottom;
+      background-color: rgba(0,0,0,0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hj-coverBox {
+        text-align: center;
+        .hj-videoCoverText {
+          text-align: center;
+          color: #ffffff;
+          font-size: 2rem;
+          font-weight: 500;
+          margin-bottom: 14px;
+        }
+
+        .hj-applyBtn {
+          margin-top: 20px;
+          width: 200px;
+          height: 50px;
+          border-radius: 11px;
+          background-color: #fc5a5a;
+          border: solid 1px #fc5a5a;
+          font-size: 20px;
+          font-weight: 500;
+          color: #ffffff;
+        }
+        .hj-applyBtn {
+          cursor: pointer; cursor: hand;
+        }
+      }
+    }
+  }
+
+  .hj-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .hj-mainCard {
+      width: 881px;
+      height: 807px;
+      border-radius: 11px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.35);
+      margin-top: 74px;
+      margin-bottom: 74px;
+    }
+  }
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+  .hj-mainVideo {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+
+    .hj-videoBox {
+      width: 100%;
+      height: 100%;
+      background-color: #d2d2d2;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+      overflow: hidden;
+    }
+
+    .hj-videoGradient {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('hj_gradient.png');
+      background-size: 100vw 100vh;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: rgba(0,0,0,0);
+      opacity: 0.3;
+      z-index:0;
+    }
+
+    .hj-videoCover {
+      z-index:1;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-image: url('se_dot_filter.png');
+      background-size: 500px 500px;
+      background-repeat: repeat;
+      background-position: left bottom;
+      background-color: rgba(0,0,0,0);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .hj-coverBox {
+        text-align: center;
+        .hj-videoCoverText {
+          text-align: center;
+          color: #ffffff;
+          font-size: 2.5rem;
+          font-weight: 500;
+          margin-bottom: 14px;
+        }
+
+        .hj-applyBtn {
+          margin-top: 20px;
+          width: 200px;
+          height: 50px;
+          border-radius: 11px;
+          background-color: #fc5a5a;
+          border: solid 1px #fc5a5a;
+          font-size: 20px;
+          font-weight: 500;
+          color: #ffffff;
+        }
+        .hj-applyBtn {
+          cursor: pointer; cursor: hand;
+        }
+      }
+    }
+  }
+
+  .hj-wrapper {
+    width: 100%;
+    height: 100%;
+
+    .hj-mainCard {
+      width: 881px;
+      height: 807px;
+      border-radius: 11px;
+      background-color: #ffffff;
+      box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.35);
+      margin-top: 74px;
+      margin-bottom: 74px;
+    }
+  }
+}
+
+#vwvideo {
+  min-width: 100%;
+  min-height: 100%;
+}

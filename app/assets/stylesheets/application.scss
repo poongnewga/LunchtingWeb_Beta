@@ -1,0 +1,253 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /* --------------------------------
+  * 반응형 그리드 시스템 설계
+  * --------------------------------
+  * breakpoint: mb | 768px | tb | 960px | dk;
+  * container width: 100% | 100% | 960px(가운데);
+  * column # : 3 | 12 | 12 ;
+  * column   : % | %  | px ;
+  * --------------------------------
+  */
+
+  /* common settings */
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F0F0F0
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+     color: inherit;
+     text-decoration:none;
+}
+
+ul, ol, li {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.row::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+  .non-mobile {
+    display: none !important;
+  }
+ .container {
+   width: 100%;
+ }
+
+ [class*="col-mb"] {
+   float: left;
+   padding: 0 10px;
+ }
+
+ .col-mb-1 { width: 33.3333333333333333%; }
+ .col-mb-2 { width: 66.6666666666666666%; }
+ .col-mb-3 { width: 100%; }
+
+/*push & pull*/
+[class*="push-"] {
+  position: relative;
+}
+.push-mb-1 { left: 33.3333333333333333%; }
+.push-mb-2 { left: 66.6666666666666666%; }
+.push-mb-3 { left: 100%; }
+[class*="pull-"] {
+  position: relative;
+}
+.pull-mb-1 { right: 33.3333333333333333%;  }
+.pull-mb-2 { right: 66.6666666666666666%; }
+.pull-mb-3 { right: 100%; }
+}
+
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+.mobile {
+  display: none !important;
+}
+.container {
+  width: 100%;
+}
+
+[class*="col-tb"] {
+ float: left;
+ padding: 0 10px;
+}
+
+.col-tb-1 { width: 8.333333333333333333333333333333333333333333333333333333333333333333333333% }
+.col-tb-2 { width: 16.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.col-tb-3 { width: 25% }
+.col-tb-4 { width: 33.33333333333333333333333333333333333333333333333333333333333333333333333% }
+.col-tb-5 { width: 41.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.col-tb-6 { width: 50% }
+.col-tb-7 { width: 58.33333333333333333333333333333333333333333333333333333333333333333333333% }
+.col-tb-8 { width: 66.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.col-tb-9 { width: 75% }
+.col-tb-10 { width: 83.3333333333333333333333333333333333333333333333333333333333333333333333% }
+.col-tb-11 { width: 91.6666666666666666666666666666666666666666666666666666666666666666666667% }
+.col-tb-12 { width: 100% }
+
+/*push & pull*/
+[class*="push-"] {
+  position: relative;
+}
+.push-tb-1 { left: 8.333333333333333333333333333333333333333333333333333333333333333333333333% }
+.push-tb-2 { left: 16.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.push-tb-3 { left: 25% }
+.push-tb-4 { left: 33.33333333333333333333333333333333333333333333333333333333333333333333333% }
+.push-tb-5 { left: 41.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.push-tb-6 { left: 50% }
+.push-tb-7 { left: 58.33333333333333333333333333333333333333333333333333333333333333333333333% }
+.push-tb-8 { left: 66.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.push-tb-9 { left: 75% }
+.push-tb-10 { left: 83.3333333333333333333333333333333333333333333333333333333333333333333333% }
+.push-tb-11 { left: 91.6666666666666666666666666666666666666666666666666666666666666666666667% }
+.push-tb-12 { left: 100% }
+[class*="pull-"] {
+  position: relative;
+}
+.pull-tb-1 { right: 8.333333333333333333333333333333333333333333333333333333333333333333333333% }
+.pull-tb-2 { right: 16.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.pull-tb-3 { right: 25% }
+.pull-tb-4 { right: 33.33333333333333333333333333333333333333333333333333333333333333333333333% }
+.pull-tb-5 { right: 41.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.pull-tb-6 { right: 50% }
+.pull-tb-7 { right: 58.33333333333333333333333333333333333333333333333333333333333333333333333% }
+.pull-tb-8 { right: 66.66666666666666666666666666666666666666666666666666666666666666666666667% }
+.pull-tb-9 { right: 75% }
+.pull-tb-10 { right: 83.3333333333333333333333333333333333333333333333333333333333333333333333% }
+.pull-tb-11 { right: 91.6666666666666666666666666666666666666666666666666666666666666666666667% }
+.pull-tb-12 { right: 100% }
+}
+
+/* desktop */
+@media screen and (min-width: 960px) {
+  .mobile {
+    display: none !important;
+  }
+ .container {
+   width: 960px;
+   margin: 0 auto;
+ }
+
+[class*="col-dk"] {
+ float: left;
+ margin: 0 10px;
+}
+
+.col-dk-1 { width: 60px; }
+.col-dk-2 { width: 140px; }
+.col-dk-3 { width: 220px; }
+.col-dk-4 { width: 300px; }
+.col-dk-5 { width: 380px; }
+.col-dk-6 { width: 460px; }
+.col-dk-7 { width: 540px; }
+.col-dk-8 { width: 620px; }
+.col-dk-9 { width: 700px; }
+.col-dk-10 { width: 780px; }
+.col-dk-11 { width: 860px; }
+.col-dk-12 { width: 940px; }
+
+/*push & pull*/
+[class*="push-"] {
+  position: relative;
+}
+.push-dk-1 { left: 60px; }
+.push-dk-2 { left: 140px; }
+.push-dk-3 { left: 220px; }
+.push-dk-4 { left: 300px; }
+.push-dk-5 { left: 380px; }
+.push-dk-6 { left: 460px; }
+.push-dk-7 { left: 540px; }
+.push-dk-8 { left: 620px; }
+.push-dk-9 { left: 700px; }
+.push-dk-10 { left: 780px; }
+.push-dk-11 { left: 860px; }
+.push-dk-12 { left: 940px; }
+[class*="pull-"] {
+  position: relative;
+}
+.pull-dk-1 { right: 60px;  }
+.pull-dk-2 { right: 140px; }
+.pull-dk-3 { right: 220px; }
+.pull-dk-4 { right: 300px; }
+.pull-dk-5 { right: 380px; }
+.pull-dk-6 { right: 460px; }
+.pull-dk-7 { right: 540px; }
+.pull-dk-8 { right: 620px; }
+.pull-dk-9 { right: 700px; }
+.pull-dk-10 { right: 780px; }
+.pull-dk-11 { right: 860px; }
+.pull-dk-12 { right: 940px; }
+}
+
+.dk_sr-only {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.display-none {
+  display: none !important;
+}
+
+/* mobile */
+@media screen and (max-width: 767px) {
+}
+/* tablet */
+@media screen and (min-width: 768px) and (max-width: 959px) {
+}
+/* desktop */
+@media screen and (min-width: 960px) {
+}
+/* desktop&tablet */
+@media screen and (min-width: 768px) {
+}

@@ -1,0 +1,67 @@
+<h1 class="dk_sr-only">런치팅 - 커뮤니티</h1>
+<h2 class="dk_sr-only">커뮤니티 페이지 입니다.</h2>
+<section class="dk_ccontainer">
+  <h2 class="dk_title">커뮤니티</h2>
+  <div class="dk_between"></div>
+  <div class="dk_search">
+    <div class="dk_searchbox">
+      <%= form_tag(posts_path, method: 'get', class: "dk_searchboxForm") do %>
+        <input type="text" name="search" class="dk_searchboxinput" placeholder="검색어를 입력하세요."/>
+        <%= image_submit_tag("dk_search.png", class: "dk_searchicon") %>
+      <% end %>
+    </div>
+  </div>
+  <% @posts.each do |post| %>
+    <a href="/posts/<%=post.id%>">
+      <article class="dk_postbox">
+        <div class="dk_top">
+          <div class="post_flex">
+            <h3 class="dk_posttitle"><%= post.title %></h3>
+            <% if post.hits >= 100 %>
+              <div class="dk_hot">Hot</div>
+            <% end %>
+          </div>
+          <div class="dk_postdate"><%= post.created_at.to_s.split("-")[0] + "." + post.created_at.to_s.split("-")[1] + "." + post.created_at.to_s.split(" ")[1].split(":").first%></div>
+        </div>
+        <div class="dk_content"><%= post.content %></div>
+        <div class="dk_bottom">
+          <% if post.user.gender == "m" %>
+            <div class="dk_point_m"></div>
+          <% else %>
+            <div class="dk_point_w"></div>
+          <% end %>
+          <div class="dk_nickname"><%= post.user.nickname %></div>
+          <div class="dk_commentnum"><%= post.comments.length %></div>
+          <%= image_tag("dk_comment.png", class: "dk_comment") %>
+          <div class="dk_likenum" id="dk_numberup<%= post.id %>"><%= post.likes.length %></div>
+          <% if current_user.is_like?(post) %>
+              <a><%= image_tag("dk_likeon.png", class: "dk_likeon") %><input class="dk_id" type="hidden" value="<%= post.id %>"></input>
+              <%= image_tag("dk_likeoff.png", class: "dk_likeoff dk_likehidden") %><input class="dk_id" type="hidden" value="<%= post.id %>"></input></a>
+          <% else %>
+              <a><%= image_tag("dk_likeon.png", class: "dk_likeon dk_likehidden") %><input class="dk_id" type="hidden" value="<%= post.id %>"></input>
+              <%= image_tag("dk_likeoff.png", class: "dk_likeoff") %><input class="dk_id" type="hidden" value="<%= post.id %>"></input></a>
+          <% end %>
+        </div>
+      </article>
+    </a>
+  <% end %>
+  <div class="dk_foot">
+    <a href="/posts/new" class="dk_writelink">
+      <div class="dk_write">
+        <div class="dk_writetext">글쓰기</div>
+        <%= image_tag("dk_writeicon.png", class: "dk_writeicon") %>
+      </div>
+    </a>
+    <div class="dk_paginate"><%= will_paginate @posts %></div>
+    <div class="dk_next">
+      <div class="dk_nexttext">다음</div>
+      <%= image_tag("dk_nextbar.png", class: "dk_nextbar") %>
+    </div>
+  </div>
+</section>
+
+<% content_for :page_js do %>
+  <script type="text/javascript">
+     <%= render file: "#{Rails.root}/app/assets/javascripts/posts.js" %>
+  </script>
+<% end %>
