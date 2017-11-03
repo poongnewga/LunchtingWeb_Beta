@@ -1,24 +1,5 @@
-# README
+# 직장인을 위한 미팅 서비스, 런치팅(Beta)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+삭막한 직장 생활 속 설렘 한 스푼.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+단조로운 점심, 설레는 시간으로 바꿔보세요!
